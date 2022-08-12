@@ -8,40 +8,19 @@ public class WallCollision : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private Rigidbody rb;
     
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private bool isTriggered = false;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("WallBox")&& !isTriggered)
+        if (other.gameObject.CompareTag("WallBox"))
         {
             Debug.Log(other.gameObject.tag);
             Destroy(gameObject);
-            
-            transform.parent.position -= Vector3.up;
-            // transform.parent.GetComponent<Rigidbody>().useGravity = true;
-            // StartCoroutine(GravitySetup());
-            isTriggered = true;
+            GetComponent<BoxCollider>().enabled = false;
+            other.gameObject.GetComponent<BoxCollider>().enabled = false;
+            transform.GetComponentInParent<PlayerMovement>().LoseHeight();
         }
     }
-
-    IEnumerator GravitySetup()
-    {
-        
-        yield return new WaitForSeconds(0.5f);
-        transform.parent.GetComponent<Rigidbody>().useGravity = false;
-
-    }
+    
 
 }

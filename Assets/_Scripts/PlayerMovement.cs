@@ -30,6 +30,10 @@ public class PlayerMovement : MonoBehaviour
         JoystickMovement();
     }
 
+
+   
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("CollectableBox"))
@@ -43,14 +47,22 @@ public class PlayerMovement : MonoBehaviour
             
             other.transform.SetParent(transform);
             other.transform.localPosition = Vector3.down * (height-1);
-
-
-
-
-
         }
     }
-
+    
+    public void LoseHeight()
+    {
+        StartCoroutine(HeightLossDelayer());
+        
+        IEnumerator HeightLossDelayer()
+        {
+            yield return new WaitForSeconds(0.1f);
+            var currentPosition = transform.position;
+            currentPosition.y = --height;
+            transform.position = currentPosition;
+        }
+        
+    }
 
     //Constant forward movement
     void ForwardMovement()
