@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
    
 
-
+    // Collision interaction with collectable box
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("CollectableBox"))
@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
+    //Decreases the height after a certain time
     public void LoseHeight()
     {
         StartCoroutine(HeightLossDelayer());

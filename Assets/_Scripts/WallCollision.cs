@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class WallCollision : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     
 
+    
+    // Collision interaction with Wall    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("WallBox"))
