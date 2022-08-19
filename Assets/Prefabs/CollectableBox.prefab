@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8404693133875240765}
   - component: {fileID: 8404693133875240762}
   - component: {fileID: 8404693133875240763}
+  - component: {fileID: 7304064808836313610}
   m_Layer: 0
   m_Name: CollectableBox
   m_TagString: CollectableBox
@@ -97,3 +98,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7304064808836313610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8404693133875240761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5518c5e47c0601840933d9658b2097cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

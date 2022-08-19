@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody playerRb;
     [SerializeField] private float forwardSpeed = 20;
     [SerializeField] private float horizontalSpeed = 2;
-    private float planeBoundry = 2;
+    
 
     private void Start()
     {
