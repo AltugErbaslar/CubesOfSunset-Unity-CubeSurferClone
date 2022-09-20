@@ -10,12 +10,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float forwardSpeed = 20;
     [SerializeField] private float horizontalSpeed = 2;
     
-
-    private void Start()
-    {
-        playerRb = GetComponent<Rigidbody>();
-    }
-
     private void Update()
     {
         
@@ -26,14 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Movement()
     {
-        var velocity = playerRb.velocity;
-        velocity.z = forwardSpeed;
-        
-
-        var horizontalInput = joystick.Horizontal;
-
-        velocity.x = horizontalInput * horizontalSpeed;
-        playerRb.velocity = velocity;
+       transform.Translate(joystick.Horizontal*horizontalSpeed*Time.deltaTime,0,forwardSpeed*Time.deltaTime);
     }
 
     
