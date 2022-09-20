@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc82c4a6883629448947ff714bb4a24, type: 3}
+  m_Name: Skybox Material.mat
+  m_EditorClassIdentifier: 
+  gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.55638033, b: 0.069811285, a: 1}
+    key1: {r: 1, g: 0.40392157, b: 0.003921569, a: 1}
+    key2: {r: 0.99607843, g: 0.65882355, b: 0.18431373, a: 0}
+    key3: {r: 1, g: 0.7607843, b: 0.53333336, a: 0}
+    key4: {r: 1, g: 0.5802665, b: 0.53333336, a: 0}
+    key5: {r: 1, g: 0.67468756, b: 0.53333336, a: 0}
+    key6: {r: 1, g: 0.616827, b: 0.53333336, a: 0}
+    key7: {r: 1, g: 0.5802665, b: 0.53333336, a: 0}
+    ctime0: 10409
+    ctime1: 23130
+    ctime2: 29105
+    ctime3: 35081
+    ctime4: 65535
+    ctime5: 49344
+    ctime6: 59367
+    ctime7: 65535
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 5
+    m_NumAlphaKeys: 2

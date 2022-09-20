@@ -9,11 +9,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody playerRb;
     [SerializeField] private float forwardSpeed = 20;
     [SerializeField] private float horizontalSpeed = 2;
-    
+    private float xRange = 2;
     private void Update()
     {
         
         Movement();
+        Border();
         
 
     }
@@ -21,6 +22,19 @@ public class PlayerMovement : MonoBehaviour
     void Movement()
     {
        transform.Translate(joystick.Horizontal*horizontalSpeed*Time.deltaTime,0,forwardSpeed*Time.deltaTime);
+    }
+
+    private void Border()
+    {
+        if (transform.position.x < -xRange)
+        {
+            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.x > xRange)
+        {
+            transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+        }
     }
 
     
