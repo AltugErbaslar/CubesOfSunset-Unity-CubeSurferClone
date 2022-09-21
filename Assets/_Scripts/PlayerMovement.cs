@@ -10,6 +10,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float forwardSpeed = 20;
     [SerializeField] private float horizontalSpeed = 2;
     private float xRange = 2;
+    private Stacker stackerScript;
+
+    private void Start()
+    {
+        stackerScript = GameObject.Find("Stacker").GetComponent<Stacker>();
+    }
+
     private void Update()
     {
         
@@ -21,7 +28,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Movement()
     {
-       transform.Translate(joystick.Horizontal*horizontalSpeed*Time.deltaTime,0,forwardSpeed*Time.deltaTime);
+
+        if (stackerScript.stackParent.childCount != 0 && stackerScript.isGameActive)
+        {
+            transform.Translate(joystick.Horizontal*horizontalSpeed*Time.deltaTime,0,forwardSpeed*Time.deltaTime);
+        }
+        
     }
 
     private void Border()

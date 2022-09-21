@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CollectableBox
   - Obstacle
+  - Money
+  - FinishRamp
   layers:
   - Default
   - TransparentFX
